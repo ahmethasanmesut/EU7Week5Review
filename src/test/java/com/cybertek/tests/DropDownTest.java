@@ -11,6 +11,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import org.testng.reporters.XMLConstants;
 
 import java.util.concurrent.TimeUnit;
 
@@ -68,6 +69,6 @@ public class DropDownTest {
         //    System.out.println("totalPriceElement.getText() = " + totalPriceElement.getText());
         // will return nothing
         int actualPrice = Integer.parseInt(totalPriceElement.getAttribute("value"));
-
+        System.out.println(actualPrice);
         Assert.assertEquals(actualPrice, expectedPrice, "Price is NOT as expected");
     }}
